@@ -8,7 +8,7 @@ const categories = [
   { id: "acrowspan", name: "Acrow Spans" },
   { id: "centeredsheets", name: "Centered Sheets" },
   { id: "clamps", name: "Clamps" },
-  //{ id: "galvanizedplanks", name: "Metal Planks" },
+//  { id: "galvanizedplanks", name: "Metal Planks" },
   { id: "jackpipes", name: "Jack Pipes" },
   { id: "columnbox", name: "Column Box" },
   { id: "shattering", name: "Heavy Shattering" },
@@ -59,13 +59,12 @@ const galleryItems: GalleryItem[] = [
   { id: "cl10", category: "clamps", image: "/gallery/clamps/i10.jpg" },
   { id: "cl11", category: "clamps", image: "/gallery/clamps/i11.jpg" },
 
-  // Galvanized Planks
+  // Metal Planks
   { id: "gp1", category: "galvanizedplanks", image: "/gallery/galvanizedplanks/i1.png" },
   { id: "gp2", category: "galvanizedplanks", image: "/gallery/galvanizedplanks/i2.png" },
 
   // Jack Pipes
-  { id: "jp1", category: "jackpipes", image: "/gallery/jackpipes/i1.png" },
-  { id: "jp2", category: "jackpipes", image: "/gallery/jackpipes/i2.png" },
+
   { id: "jp3", category: "jackpipes", image: "/gallery/jackpipes/i3.png" },
   { id: "jp4", category: "jackpipes", image: "/gallery/jackpipes/i4.png" },
   { id: "jp5", category: "jackpipes", image: "/gallery/jackpipes/i5.jpg" },
@@ -86,9 +85,9 @@ const galleryItems: GalleryItem[] = [
   { id: "cb10", category: "columnbox", image: "/gallery/columnbox/i10.jpg" },
   { id: "cb11", category: "columnbox", image: "/gallery/columnbox/i11.jpg" },
 
-  //Shattering
-  { id: "hs", category: "shattering", image: "/gallery/shattering/i1.jpg" },
-  { id: "hs", category: "shattering", image: "/gallery/shattering/i2.jpg" },
+  // Shattering
+  { id: "hs1", category: "shattering", image: "/gallery/shattering/i1.jpg" },
+  { id: "hs2", category: "shattering", image: "/gallery/shattering/i2.jpg" },
 ];
 
 const Gallery = () => {
@@ -143,9 +142,10 @@ const Gallery = () => {
                 src={item.image}
                 alt={item.category}
                 loading="lazy"
+                decoding="async"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-700/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-700/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 pointer-events-none">
                 <p className="text-orange-400 text-sm font-semibold font-['Inter']">
                   {categories.find((c) => c.id === item.category)?.name}
                 </p>
@@ -163,7 +163,10 @@ const Gallery = () => {
         >
           <button
             className="absolute top-4 right-4 text-white hover:text-orange-400 transition-colors"
-            onClick={() => setLightboxImage(null)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxImage(null);
+            }}
             aria-label="Close lightbox"
           >
             <X size={36} />
