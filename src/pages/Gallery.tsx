@@ -8,7 +8,7 @@ const categories = [
   { id: "acrowspan", name: "Acrow Spans" },
   { id: "centeredsheets", name: "Centered Sheets" },
   { id: "clamps", name: "Clamps" },
-  { id: "galvanizedplanks", name: "Metal Planks" },
+  //{ id: "galvanizedplanks", name: "Metal Planks" },
   { id: "jackpipes", name: "Jack Pipes" },
   { id: "columnbox", name: "Column Box" },
 ];

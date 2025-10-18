@@ -4,43 +4,38 @@ export default function Services() {
       title: 'Scaffolding Systems',
       description: 'Heavy-duty scaffolding systems designed for maximum safety and efficiency. Perfect for all types of construction projects, from residential to commercial buildings.',
       features: ['High load capacity', 'Easy assembly', 'Corrosion resistant'],
-      image: 'https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/gallery/scaffolding/i3.png',
     },
     {
       title: 'Centering Plates & Boxes',
       description: 'Premium quality centering plates and centering boxes for concrete slab construction. Engineered for strength and durability.',
       features: ['Precise dimensions', 'Heavy-duty construction', 'Reusable'],
-      image: 'https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/gallery/centeredsheets/i2.png',
     },
     {
       title: 'Adjustable Telescopic Spans (Acrow Span)',
       description: 'Versatile adjustable spans that provide flexible support solutions for various construction requirements. Easy to adjust and install.',
       features: ['Adjustable length', 'High strength', 'Lightweight design'],
-      image: 'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/gallery/acrowspan/i2.png',
     },
     {
       title: 'Jack Pipes',
       description: 'Robust jack pipes designed to support heavy loads during construction. Essential for vertical load transfer in multi-story buildings.',
       features: ['High load capacity', 'Durable steel', 'Various sizes available'],
-      image: 'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/gallery/jackpipes/i4.png',
     },
-    {
-      title: 'Cup-Lock Systems',
-      description: 'Advanced cup-lock scaffolding system offering superior strength and flexibility. Quick to assemble with minimal tools required.',
-      features: ['Quick assembly', 'Modular design', 'High safety standards'],
-      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800',
-    },
+
     {
       title: 'Column Boxes',
       description: 'High-quality column boxes including round column boxes for concrete column construction. Precision-engineered for perfect results.',
       features: ['Round & square options', 'Smooth finish', 'Easy handling'],
-      image: 'https://images.pexels.com/photos/8961185/pexels-photo-8961185.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/gallery/columnbox/i2.jpg',
     },
     {
       title: 'U Jacks & Base Jacks',
       description: 'Essential adjustable support jacks for scaffolding systems. Provides stable base support and height adjustment capabilities.',
       features: ['Adjustable height', 'Strong base plate', 'Corrosion resistant'],
-      image: 'https://images.pexels.com/photos/5974400/pexels-photo-5974400.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/gallery/ujake/i2.png',
     },
   ];
 
