@@ -30,7 +30,7 @@ export default function ServicesSection() {
       title: 'Scaffolding Systems',
       description: 'Heavy-duty scaffolding systems designed for maximum safety and efficiency.',
       features: ['High load capacity', 'Easy assembly', 'Corrosion resistant'],
-      image: '/gallery/scaffolding/i3.png',
+      image: '/gallery/scaffolding/i7.jpg',
     },
     {
       title: 'Centering Plates & Boxes',
@@ -48,13 +48,13 @@ export default function ServicesSection() {
       title: 'Jack Pipes',
       description: 'Robust jack pipes designed to support heavy loads during construction.',
       features: ['High load capacity', 'Durable steel', 'Various sizes available'],
-      image: '/gallery/jackpipes/i4.png',
+      image: '/gallery/jackpipes/i9.jpg',
     },
     {
       title: 'Column Boxes',
       description: 'High-quality column boxes for concrete column construction.',
       features: ['Round & square options', 'Smooth finish', 'Easy handling'],
-      image: '/gallery/columnbox/i2.jpg',
+      image: '/gallery/columnbox/i13.jpg',
     },
     {
       title: 'U Jacks & Base Jacks',
@@ -80,7 +80,7 @@ export default function ServicesSection() {
               className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all group section-animate ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.title}

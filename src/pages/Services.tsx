@@ -22,14 +22,14 @@ export default function Services() {
       title: 'Jack Pipes',
       description: 'Robust jack pipes designed to support heavy loads during construction. Essential for vertical load transfer in multi-story buildings.',
       features: ['High load capacity', 'Durable steel', 'Various sizes available'],
-      image: '/gallery/jackpipes/i4.png',
+      image: '/gallery/jackpipes/i9.jpg',
     },
 
     {
       title: 'Column Boxes',
       description: 'High-quality column boxes including round column boxes for concrete column construction. Precision-engineered for perfect results.',
       features: ['Round & square options', 'Smooth finish', 'Easy handling'],
-      image: '/gallery/columnbox/i2.jpg',
+      image: '/gallery/columnbox/i13.jpg',
     },
     {
       title: 'U Jacks & Base Jacks',
