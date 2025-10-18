@@ -3,10 +3,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
-import GallerySection from './components/GallerySection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import BackToTop from './components/BackToTop';
+import Gallery from './pages/Gallery';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -40,7 +40,7 @@ function App() {
       <main>
         <HeroSection />
         <ServicesSection />
-        <GallerySection />
+        <Gallery/>
         <AboutSection />
         <ContactSection />
       </main>

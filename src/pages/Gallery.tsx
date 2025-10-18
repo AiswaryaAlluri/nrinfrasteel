@@ -11,6 +11,7 @@ const categories = [
   //{ id: "galvanizedplanks", name: "Metal Planks" },
   { id: "jackpipes", name: "Jack Pipes" },
   { id: "columnbox", name: "Column Box" },
+  { id: "shattering", name: "Heavy Shattering" },
 ];
 
 // ✅ Gallery Items
@@ -27,7 +28,12 @@ const galleryItems: GalleryItem[] = [
   { id: "scaf3", category: "scaffolding", image: "/gallery/scaffolding/i3.png" },
   { id: "scaf4", category: "scaffolding", image: "/gallery/scaffolding/i4.png" },
   { id: "scaf5", category: "scaffolding", image: "/gallery/scaffolding/i5.png" },
-  { id: "scaf6", category: "scaffolding", image: "/gallery/scaffolding/i6.png" },
+  { id: "scaf6", category: "scaffolding", image: "/gallery/scaffolding/i5.jpg" },
+  { id: "scaf7", category: "scaffolding", image: "/gallery/scaffolding/i6.jpg" },
+  { id: "scaf8", category: "scaffolding", image: "/gallery/scaffolding/i7.png" },
+  { id: "scaf9", category: "scaffolding", image: "/gallery/scaffolding/i8.png" },
+  { id: "scaf10", category: "scaffolding", image: "/gallery/scaffolding/i9.png" },
+  { id: "scaf11", category: "scaffolding", image: "/gallery/scaffolding/i10.png" },
 
   // Acrowspan
   { id: "acrow1", category: "acrowspan", image: "/gallery/acrowspan/i1.png" },
@@ -62,6 +68,10 @@ const galleryItems: GalleryItem[] = [
   { id: "jp2", category: "jackpipes", image: "/gallery/jackpipes/i2.png" },
   { id: "jp3", category: "jackpipes", image: "/gallery/jackpipes/i3.png" },
   { id: "jp4", category: "jackpipes", image: "/gallery/jackpipes/i4.png" },
+  { id: "jp5", category: "jackpipes", image: "/gallery/jackpipes/i5.jpg" },
+  { id: "jp6", category: "jackpipes", image: "/gallery/jackpipes/i6.jpg" },
+  { id: "jp7", category: "jackpipes", image: "/gallery/jackpipes/i7.jpg" },
+  { id: "jp8", category: "jackpipes", image: "/gallery/jackpipes/i7.jpg" },
 
   // Column Box
   { id: "cb1", category: "columnbox", image: "/gallery/columnbox/i1.jpg" },
@@ -71,6 +81,14 @@ const galleryItems: GalleryItem[] = [
   { id: "cb5", category: "columnbox", image: "/gallery/columnbox/i5.jpg" },
   { id: "cb6", category: "columnbox", image: "/gallery/columnbox/i6.jpg" },
   { id: "cb7", category: "columnbox", image: "/gallery/columnbox/i7.jpg" },
+  { id: "cb8", category: "columnbox", image: "/gallery/columnbox/i8.jpg" },
+  { id: "cb9", category: "columnbox", image: "/gallery/columnbox/i9.jpg" },
+  { id: "cb10", category: "columnbox", image: "/gallery/columnbox/i10.jpg" },
+  { id: "cb11", category: "columnbox", image: "/gallery/columnbox/i11.jpg" },
+
+  //Shattering
+  { id: "hs", category: "shattering", image: "/gallery/shattering/i1.jpg" },
+  { id: "hs", category: "shattering", image: "/gallery/shattering/i2.jpg" },
 ];
 
 const Gallery = () => {
@@ -125,7 +143,7 @@ const Gallery = () => {
                 src={item.image}
                 alt={item.category}
                 loading="lazy"
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-700/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <p className="text-orange-400 text-sm font-semibold font-['Inter']">

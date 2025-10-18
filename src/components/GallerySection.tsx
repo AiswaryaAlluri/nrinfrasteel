@@ -60,39 +60,32 @@ const galleryItems: GalleryItem[] = [
 const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    // Trigger animations after mount
+    const timer = setTimeout(() => setMounted(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
+  // Filtered items based on category
   const filteredItems =
     selectedCategory === "all"
       ? galleryItems
       : galleryItems.filter((item) => item.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-gray-50 to-gray-100" ref={sectionRef}>
+    <section
+      id="gallery"
+      className="py-20 bg-gradient-to-b from-gray-50 to-gray-100 scroll-mt-16"
+    >
       <div className="container mx-auto px-4">
-        <div className={`text-center mb-12 section-animate ${isVisible ? 'visible' : ''}`}>
+        {/* Section Header */}
+        <div
+          className={`text-center mb-12 transition-all duration-700 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Gallery
           </h2>
@@ -101,14 +94,19 @@ const GallerySection = () => {
           </p>
         </div>
 
-        <div className={`flex flex-wrap justify-center gap-3 mb-12 section-animate ${isVisible ? 'visible' : ''}`}>
+        {/* Category Buttons */}
+        <div
+          className={`flex flex-wrap justify-center gap-3 mb-12 transition-all duration-700 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 rounded-lg text-sm md:text-base font-semibold transition-all duration-300 ${
                 selectedCategory === cat.id
-                  ? "bg-orange-500 text-white shadow-lg"
+                  ? "bg-orange-500 text-white shadow-md scale-105"
                   : "bg-white text-gray-800 border border-gray-300 hover:bg-orange-100 hover:border-orange-300"
               }`}
             >
@@ -117,13 +115,16 @@ const GallerySection = () => {
           ))}
         </div>
 
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => (
             <div
               key={item.id}
-              className={`group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer bg-white section-animate ${isVisible ? 'visible' : ''}`}
-              style={{ transitionDelay: `${index * 0.05}s` }}
               onClick={() => setLightboxImage(item.image)}
+              className={`group relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl cursor-pointer transform transition-all duration-500 bg-white ${
+                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${index * 0.04}s` }}
             >
               <img
                 src={item.image}
@@ -141,10 +142,13 @@ const GallerySection = () => {
         </div>
       </div>
 
+      {/* Lightbox */}
       {lightboxImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-fadeIn"
           onClick={() => setLightboxImage(null)}
+          role="dialog"
+          aria-modal="true"
         >
           <button
             className="absolute top-4 right-4 text-white hover:text-orange-400 transition-colors"
@@ -155,13 +159,15 @@ const GallerySection = () => {
           </button>
           <img
             src={lightboxImage}
-            alt="Preview"
-            className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
+            alt="Gallery preview"
+            className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-xl"
           />
         </div>
       )}
     </section>
   );
 };
+
+
 
 export default GallerySection;
