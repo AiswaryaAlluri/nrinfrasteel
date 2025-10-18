@@ -57,8 +57,8 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-                <div className="text-white font-bold text-2xl">NR</div>
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                             <img src="/logo.png" alt="logo" className='w-12' />
               </div>
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold">NR Infra Steel</h1>
