@@ -87,7 +87,7 @@ const Gallery = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-gray-800 font-['Poppins']">
+          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-gray-800">
             Our Projects
           </h2>
           <p className="text-lg text-gray-600 font-['Inter']">
@@ -101,7 +101,7 @@ const Gallery = () => {
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2 rounded-md text-sm md:text-base font-semibold font-['Inter'] transition-all duration-300 ${
+              className={`px-4 py-2 rounded-md text-sm md:text-base font-semibold transition-all duration-300 ${
                 selectedCategory === cat.id
                   ? "bg-orange-500 text-white shadow-lg shadow-orange-300"
                   : "bg-white text-gray-800 border border-gray-300 hover:bg-orange-100"

@@ -7,8 +7,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                <div className="text-white font-bold text-lg">NR</div>
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                      <img src="/logo.png" alt="logo" className='w-11' />
               </div>
               <div>
                 <h3 className="text-xl font-bold">NR Infra Steel</h3>
@@ -47,6 +47,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4 text-orange-500">Our Location</h4>
             <div className="flex items-start space-x-2 text-sm text-gray-400">
               <MapPin size={16} className="mt-1 flex-shrink-0" />
+              <p><strong>Head Office : </strong> Nandigama</p>
               <p>
                 SC Complex, Shop No.3<br />
                 Bholakpur, Musheerabad<br />

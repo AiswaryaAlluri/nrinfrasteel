@@ -16,8 +16,8 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => onNavigate('Home')}>
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-              <div className="text-white font-bold text-xl">NR</div>
+            <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+               <img src="/logo.png" alt="logo" className='w-11' />
             </div>
             <div>
               <h1 className="text-2xl font-bold">NR Infra Steel</h1>
