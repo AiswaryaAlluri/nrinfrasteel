@@ -11,7 +11,7 @@ export default function ServicesSection() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0 }
     );
 
     if (sectionRef.current) {
@@ -65,7 +65,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white" ref={sectionRef}>
+    <section id="services" className="py-5 bg-white" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className={`text-center mb-12 section-animate ${isVisible ? 'visible' : ''}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
